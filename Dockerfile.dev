@@ -12,11 +12,8 @@ RUN bun install
 # Copy the rest of the application
 COPY . .
 
-# Build the application
-RUN bun run build
-
 # Expose port
 EXPOSE 5173
 
-# Set the command to run the application
+# Set the command to run the application in development mode with hot reloading
 CMD ["bun", "run", "dev", "--host", "0.0.0.0"]

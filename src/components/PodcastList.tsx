@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchPodcasts, type Podcast } from '../services/api';
+import './PodcastList.css';
 
 export default function PodcastList() {
   const [podcasts, setPodcasts] = useState<Podcast[]>([]);
